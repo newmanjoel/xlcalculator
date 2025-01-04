@@ -2,7 +2,7 @@ import jsonpickle
 import unittest
 
 from xlcalculator import reader, xltypes, tokenizer
-from . import testing
+from tests import testing
 
 
 class ReaderTest(unittest.TestCase):
