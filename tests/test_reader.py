@@ -47,8 +47,5 @@ class ReaderTest(unittest.TestCase):
         archive.read()
         defined_names = archive.read_defined_names()
 
-        its_a_blank = (
-            set(sorted(defined_names.keys()))
-            - set(sorted(self.defined_names.keys()))
-        )
+        its_a_blank = (set(sorted(defined_names.keys())) - set(sorted(self.defined_names.keys())))
         self.assertEqual(list(its_a_blank), ['Its_a_blank'])

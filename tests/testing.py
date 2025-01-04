@@ -110,12 +110,13 @@ class FunctionalTestCase(XlCalculatorTestCase):
             get_resource(self.filename))
         self.evaluator = evaluator.Evaluator(self.model)
 
+
 if __name__ == "__main__":
     from pathlib import Path
-    parent_directory = Path(__file__).parent
+    p_dir = Path(__file__).parent
     # Discover all tests in the current directory
     test_loader = unittest.defaultTestLoader
-    test_suite = test_loader.discover(start_dir=parent_directory, pattern="*.py")
+    test_suite = test_loader.discover(start_dir=p_dir, pattern="*.py")
 
     # Create a test runner
     test_runner = unittest.TextTestRunner()
